@@ -36,7 +36,7 @@ const CardAddForm = ({ FileInput, onSubmit }) => {
         onSubmit(card);
     };
     return (
-        <from ref={formRef} className={styles.form}>
+        <form ref={formRef} className={styles.form}>
             <input ref={nameRef} className={styles.input} type="text" name="name" placeholder='Name' />
             <input ref={companyRef} className={styles.input} type="text" name="company" placeholder='Company' />
             <select ref={themeRef} className={styles.select} name="theme" placeholder='Theme'>
@@ -51,7 +51,7 @@ const CardAddForm = ({ FileInput, onSubmit }) => {
                 <FileInput name={file.fileName} onFileChange={onFileChange} />
             </div>
             <Button name="Add" onClick={handleSubmit} />
-        </from>
+        </form>
     )
 };
 

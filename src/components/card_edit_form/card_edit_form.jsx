@@ -25,7 +25,7 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
         deleteCard(card);
     };
     return (
-        <from className={styles.form}>
+        <form className={styles.form}>
             <input className={styles.input} type="text" name="name" value={name} onChange={onChange} />
             <input className={styles.input} type="text" name="company" value={company} onChange={onChange} />
             <select className={styles.select} name="theme" value={theme} onChange={onChange}>
@@ -40,7 +40,7 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
                 <FileInput name={fileName} onFileChange={onFileChange} />
             </div>
             <Button name="Delete" onClick={onSubmit} />
-        </from>
+        </form>
     )
 };
 
