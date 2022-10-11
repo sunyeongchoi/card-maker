@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../button/button';
 import styles from './card_add_form.module.css'
 
-const CardAddForm = ({ FileInput, onSubmit }) => {
+const CardAddForm = React.memo(({ FileInput, onSubmit }) => {
     const formRef = React.useRef();
     const nameRef = React.useRef();
     const companyRef = React.useRef();
@@ -53,7 +53,7 @@ const CardAddForm = ({ FileInput, onSubmit }) => {
             <Button name="Add" onClick={handleSubmit} />
         </form>
     )
-};
+});
 
 
 export default CardAddForm;

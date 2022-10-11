@@ -11,9 +11,9 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
     const [cards, setCards] = React.useState({});
     const [userId, setUserId] = React.useState(historyState && historyState.id);
     const navigate = useNavigate();
-    const onLogout = () => {
+    const onLogout = React.useCallback(() => {
         authService.logout();
-    };
+    }, [authService]);
 
     React.useEffect(() => {
         if (!userId) {

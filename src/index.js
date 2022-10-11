@@ -10,7 +10,7 @@ import CardRepository from './service/card_repository';
 const authService = new AuthService();
 const imageUploader = new ImageUploader();
 const cardRepository = new CardRepository();
-const FileInput = props => <ImageFileInput {...props} imageUploader={imageUploader} />
+const FileInput = React.memo(props => <ImageFileInput {...props} imageUploader={imageUploader} />);
 
 ReactDOM.render(
   <React.StrictMode>
